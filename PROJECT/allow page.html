@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+<head>
+ <title>Reg Form</title>    
+    <style type="text/css">    
+        body{    
+            font-family: Bahnschrift SemiCondensed;
+            background: linear-gradient(to right, #c83434 0%, #d45a5a 100%);
+        }    
+        input[type="text"] {    
+            width: 250px;    
+        }    
+        input[type="button"], input[type="reset"] {    
+            width: 77px;    
+            height: 27px;    
+            position: relative;left: 180px;    
+        }    
+        form{
+            background: linear-gradient(to right, #d35656 0%, #db7575 100%);    
+            text-align: center;    
+            font-family: Calibri;    
+            font-size: 20px;    
+            border: 3px solid black;  
+ 		border-radius:20px;  
+            width: 600px;    
+            margin: 20px auto;    
+        }    
+        td {    
+            padding: 10px;    
+        }    
+        td:first-child {    
+            text-align: right;    
+            font-weight: bold;    
+        }    
+        td:last-child {    
+            text-align: left;  
+
+    </style>    
+    <script>    
+        function validate() {    
+            var fname = document.reg_form.fname;    
+            var lname = document.reg_form.lname;    
+            var gender = document.reg_form.gender;    
+            var email = document.reg_form.email;    
+            var mobile = document.reg_form.mobile;
+            var link1 = document.reg_form.link1;    
+    
+            if (fname.value.length <= 0) {    
+                alert("Name is required");    
+                fname.focus();    
+                return false;    
+            }    
+            if (lname.value.length <= 0) {    
+                alert("Last Name is required");    
+                lname.focus();    
+                return false;    
+            }        
+            if (gender.value.length <= 0) {    
+                alert("Gender is required");    
+                gender.focus();    
+                return false;    
+            }    
+            if (email.value.length <= 0) {    
+                alert("Email Id is Invalid");    
+                email.focus();    
+                return false;    
+            }    
+            if (mobile.value.length <= 9) {    
+                alert("Mobile number is Invalid");    
+                mobile.focus();    
+                return false;    
+            } 
+                 
+            return true; 
+               
+        }    
+    </script>    
+</head>    
+<body>    
+    <center><h1>Enter The Details</h1></center>    
+    <hr>    
+    <form method="" action="" name="reg_form" >    
+        <h2>Registration Form</h2>    
+        <table>    
+            <tr>    
+                <td><label>First Name: </label></td>    
+                <td>    
+                    <input type="text" name="fname" placeholder="First Name">    
+                </td>    
+            </tr>    
+            <tr>    
+                <td><label>Last Name: </label></td>    
+                <td>    
+                    <input type="text" name="lname" placeholder="Last Name">    
+                </td>    
+            </tr>       
+            <tr>    
+                <td><label>Gender: </label></td>    
+                <td>    
+                    <input type="radio" name="gender" value="male">Male    
+                    <input type="radio" name="gender" value="femele">Female    
+                </td>    
+            </tr>    
+            <tr>    
+                <td><label>Email Id: </label></td>    
+                <td>    
+                    <input type="text" name="email" placeholder="example@gmail.com">    
+                </td>    
+            </tr>    
+            <tr>    
+                <td><label>Mobile: </label></td>    
+                <td>    
+                    <input type="number" name="mobile">    
+                </td>    
+            </tr>        
+            <tr>    
+                <td> 
+                    <a href="file:///C:/Users/Likin%20veer/OneDrive/Documents/PROJECT/index1.html" id="link1"> 
+                    <input type="button" name="submit" value="Submit" onclick="validate()"></a>
+                    <input type="reset" name="reset" value="Reset">    
+                </td>    
+            </tr>             
+        </table>    
+    </form>    
+</body>    
+</html>
